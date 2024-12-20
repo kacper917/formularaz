@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz dotyczący koncertu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 600px;
+            margin: auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        .form-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+        }
+        table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .checkbox-group, .radio-group {
+            margin-left: 10px;
+        }
+        .hours {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .hours select {
+            width: 30%;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-title">Formularz dotyczący koncertu</div>
+        <form action="#" method="post">
+
+            <table>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" name="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" name="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>Pesel:</td>
+                    <td><input type="text" name="pesel"></td>
+                </tr>
+                <tr>
+                    <td>Adres zamieszkania:</td>
+                    <td><textarea rows="2" name="adres"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Numer telefonu kontaktowego:</td>
+                    <td><input type="text" name="telefon"></td>
+                </tr>
+
+</table>
+           <table>
+        <div class="section-title">dane:</div>
+            
+                <select name="dane">
+                    <option value="Potwierdz">potwierdz</option><br>
+                    <option value="anuluj">anuluj</option><br>
+</table>
+
+                  
+
+            <div class="section-title">Wybierz wiek:</div><br>
+            <div class="radio-group">
+	
+                <input type="radio" name="wiek" value="ponizej"> Poniżej 16 lat<br>
+                <input type="radio" name="wiek" value="do45"> Do lat 45<br>
+                <input type="radio" name="wiek" value="senior"> Senior
+
+            </div>
+
+            <div class="section-title">Wybierz styl muzyczny:</div>
+            <div class="checkbox-group">
+                <input type="checkbox" name="muzyka" value="hiphop"> Hip-hop<br>
+                <input type="checkbox" name="muzyka" value="discopolo"> Disco Polo<br>
+                <input type="checkbox" name="muzyka" value="rap"> Rap<br>
+                <input type="checkbox" name="muzyka" value="trap"> Trap<br>
+                <input type="checkbox" name="muzyka" value="pop"> Pop
+            </div>
+
+            <div class="section-title">Wybierz miejsce wydarzenia:</div>
+            <div class="checkbox-group">
+                <input type="checkbox" name="miejsce" value="wroclaw"> Wrocław<br>
+                <input type="checkbox" name="miejsce" value="krakow"> Kraków<br>
+                <input type="checkbox" name="miejsce" value="gdansk"> Gdańsk<br>
+                <input type="checkbox" name="miejsce" value="sopot"> Sopot<br>
+                <input type="checkbox" name="miejsce" value="gdynia"> Gdynia<br>
+                <input type="checkbox" name="miejsce" value="szczecin"> Szczecin<br>
+                <input type="checkbox" name="miejsce" value="warszawa"> Warszawa
+            </div>
+
+            <div class="section-title">Wybierz metodę płatności:</div>
+            <div class="radio-group">
+                <input type="radio" name="platnosc" value="gotowka"> Gotówka<br>
+                <input type="radio" name="platnosc" value="karta"> Karta płatnicza<br>
+                <input type="radio" name="platnosc" value="blik"> Kod BLIK<br>
+                <input type="radio" name="platnosc" value="promocyjny"> Kod promocyjny
+            </div>
+
+            <div class="section-title">Wybierz dni wydarzenia:</div>
+            <div class="checkbox-group">
+<align="right">
+                <input type="checkbox" name="dzien" value="pon"> Poniedziałek<br>
+                <input type="checkbox" name="dzien" value="wt"> Wtorek<br>
+                <input type="checkbox" name="dzien" value="sr"> Środa<br>
+                <input type="checkbox" name="dzien" value="czw"> Czwartek<br>
+                <input type="checkbox" name="dzien" value="pt"> Piątek<br>
+                <input type="checkbox" name="dzien" value="sb"> Sobota<br>
+                <input type="checkbox" name="dzien" value="nd"> Niedziela<br></align>
+            </div>
+
+            <div class="section-title">Wybierz godziny:</div>
+            <div class="hours">
+                <select name="godziny_robocze">
+                    <option value="16:30">16:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="22:30">22:30</option>
+                </select>
+                <select name="godziny_wieczorne">
+                    <option value="19:20">19:20</option>
+                    <option value="20:45">20:45</option>
+                    <option value="23:05">23:05</option>
+                    <option value="00:00">00:00</option>
+                </select>
+            </div>
+
+            <div class="section-title">Twoje uwagi:</div>
+            <textarea rows="3" name="uwagi"></textarea>
+
+            <div class="button-container">
+                <button type="submit">Potwierdź dane</button>
+                <button type="button">Anuluj całość</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
